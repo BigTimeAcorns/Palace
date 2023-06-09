@@ -44,6 +44,17 @@ public class Palace {
         return numberOfRooms;
     }
 
+    public String move(String p) {
+        String[] locations = { "New York", "San Diego", "New Orleans", "Chicago", "Denver", "Seatle", "Honolulu" };
+        for (int i = 0; i < locations.length; i++) {
+            if (p == locations[i]) {
+                color = locations[i];
+                return "You moved your palace to: " + location;
+            }
+        }
+        return "You can't move your palace to: " + location;
+    }
+
     // returns the location
     public String getLocation() {
         return location;
